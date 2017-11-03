@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED)) {
                 try {
-                    mPdfGenerator = new PdfGenerator(fileName,Message);
+                    mPdfGenerator = new PdfGenerator(fileName,Message,MainActivity.this);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } else{
                     try {
-                        mPdfGenerator = new PdfGenerator(fileName,Message);
+                        mPdfGenerator = new PdfGenerator(fileName,Message,MainActivity.this);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
